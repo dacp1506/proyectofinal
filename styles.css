@@ -1,0 +1,165 @@
+/* File: styles.css */
+:root{
+  --bg:#0f1724;
+  --accent:#ff6b6b;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --glass: rgba(255,255,255,0.06);
+  --container:1200px;
+  --radius:14px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:linear-gradient(180deg,#fbfbfd 0%, #f6f7fb 100%);color:#0b1220;line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:1rem}
+.site-header{background:transparent;position:sticky;top:0;z-index:50;padding:.75rem 0}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:1.25rem;text-decoration:none;color:var(--bg)}
+.logo span{color:var(--accent)}
+.main-nav{display:flex;gap:1rem;align-items:center}
+.main-nav a{color:var(--bg);text-decoration:none;font-weight:600}
+.btn-outline{padding:.5rem .8rem;border:1px solid var(--bg);border-radius:10px}
+.nav-toggle{display:none;background:none;border:0;font-size:1.5rem}
+
+.hero{padding:3rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.hero-left h1{font-size:2.25rem;margin:0 0 .5rem}
+.hero-left p{color:var(--muted);margin:0 0 1rem}
+.search-form{display:flex;gap:.5rem;align-items:center}
+.search-form input, .search-form select{padding:.75rem 1rem;border-radius:10px;border:1px solid #e6e9ef;min-width:0}
+.search-form .btn{padding:.75rem 1rem;border-radius:10px;border:0;background:var(--accent);color:#fff}
+.hero-right .hero-card{border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(15,17,36,0.08)}
+.hero-right img{display:block;width:100%;height:100%;object-fit:cover}
+
+.section{padding:3rem 0}
+.section-title{font-size:1.5rem;margin:0 0 .25rem}
+.alt-bg{background:linear-gradient(180deg,#fff 0%, #fbfdff 100%)}
+.muted{color:var(--muted)}
+
+.grid{display:grid;gap:1.25rem}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(11,17,32,0.04)}
+.card img{width:100%;height:180px;object-fit:cover}
+.card-body{padding:1rem}
+.card-body h3{margin:0 0 .5rem}
+.card-body p{margin:0 0 .75rem;color:var(--muted)}
+.link{color:var(--accent);text-decoration:none;font-weight:600}
+
+.package{background:linear-gradient(180deg,#ffffff,#fcfdff);padding:1.2rem;border-radius:12px;box-shadow:0 8px 24px rgba(11,17,32,0.04);text-align:center}
+.package h3{margin:0 0 .25rem}
+.package .price{font-weight:800;font-size:1.25rem;margin:0 0 .75rem}
+.package ul{list-style:none;padding:0;margin:0 0 1rem}
+.package li{color:var(--muted);margin-bottom:.4rem}
+
+.about-grid{display:grid;grid-template-columns:1fr 360px;gap:2rem;align-items:start}
+.testimonial blockquote{background:var(--glass);padding:1rem;border-radius:12px}
+.testimonial cite{display:block;margin-top:.5rem;color:var(--muted);font-size:.9rem}
+
+.contact-grid{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:start}
+.contact-form input, .contact-form textarea{width:100%;padding:.75rem;border-radius:10px;border:1px solid #e9edf5;margin-bottom:.75rem}
+
+.site-footer{padding:2rem 0;background:#fff;margin-top:2rem}
+.footer-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;align-items:start}
+.footer-col h4{margin:0 0 .5rem}
+.footer-col nav a{display:block;color:var(--muted);text-decoration:none;margin-bottom:.4rem}
+.copyright{text-align:center;color:var(--muted);margin-top:1rem}
+
+/* Responsive */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .grid-3{grid-template-columns:1fr}
+  .nav-toggle{display:block}
+  .main-nav{position:absolute;right:1rem;top:64px;background:#fff;padding:1rem;border-radius:10px;box-shadow:0 10px 30px rgba(11,17,32,0.08);display:flex;flex-direction:column;gap:.5rem;display:none}
+  .main-nav.open{display:flex}
+}
+
+/* Small utility classes */
+.btn{background:var(--accent);color:#fff;border:0;padding:.6rem .9rem;border-radius:10px;font-weight:700}
+.btn:active{transform:translateY(1px)}
+.btn-outline{background:transparent}
+
+/* Mejoras de estilo avanzadas */
+
+/* Sombras más suaves */
+.card, .package, .hero-right .hero-card {
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+/* Botones más elegantes */
+.btn {
+  padding: .75rem 1.2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: all .25s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255,107,107,0.4);
+}
+
+/* Enlaces con animación */
+.link {
+  position: relative;
+}
+.link::after {
+  content:"";
+  width:0;
+  height:2px;
+  background:var(--accent);
+  position:absolute;
+  bottom:-2px;
+  left:0;
+  transition:.3s;
+}
+.link:hover::after{
+  width:100%;
+}
+
+/* Efecto glass */
+.testimonial blockquote{
+  backdrop-filter: blur(6px);
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+/* Tarjetas interactivas */
+.card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+/* Paquetes animados */
+.package {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.package:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Mejor espaciado en el footer */
+.footer-col nav a:hover {
+  color: var(--accent);
+  margin-left: 4px;
+  transition: .25s;
+}
+
+/* Inputs más limpios */
+input, textarea, select {
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent);
+  outline:none;
+  box-shadow: 0 0 0 3px rgba(255,107,107,.25);
+}
+
+/* End of styles */

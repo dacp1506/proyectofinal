@@ -1,0 +1,199 @@
+<!-- File: index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Explora Mundo - Agencia de Viajes</title>
+  <meta name="description" content="Explora Mundo - paquetes, destinos y experiencias para tu próximo viaje." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Explora <span>Mundo</span></a>
+      <nav class="main-nav">
+        <a href="#destinos">Destinos</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="#sobre-nosotros">Sobre nosotros</a>
+        <a href="#contacto" class="btn-outline">Contacto</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h1>Viajes con propósito. Aventuras inolvidables.</h1>
+        <p>Explora destinos únicos, encuentra paquetes personalizados y viaja con seguridad y estilo.</p>
+        <form class="search-form" action="#" onsubmit="return false;">
+          <input type="text" placeholder="Busca un destino, ej. París, Machu Picchu" aria-label="Buscar destino">
+          <select aria-label="Tipo de viaje">
+            <option value="cualquiera">Cualquiera</option>
+            <option value="aventura">Aventura</option>
+            <option value="relax">Relax</option>
+            <option value="cultural">Cultural</option>
+          </select>
+          <button class="btn">Buscar</button>
+        </form>
+      </div>
+      <div class="hero-right" aria-hidden="true">
+        <div class="hero-card">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=60" alt="Playa tropical">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="destinos" class="section container">
+      <h2 class="section-title">Destinos destacados</h2>
+      <p class="muted">Escogidos por viajeros y expertos.</p>
+      <div class="grid grid-3">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1505765056451-8c3c0b9f5b5e?auto=format&fit=crop&w=800&q=60" alt="Ciudad histórica">
+          <div class="card-body">
+            <h3>Ciudades históricas</h3>
+            <p>Recorre calles llenas de historia y gastronomía local.</p>
+            <a class="link" href="#">Ver paquetes</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1517821365204-6f5b7f6f9e4b?auto=format&fit=crop&w=800&q=60" alt="Montañas">
+          <div class="card-body">
+            <h3>Montaña y aventura</h3>
+            <p>Trekking, senderismo y paisajes que quitan el aliento.</p>
+            <a class="link" href="#">Ver paquetes</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=60" alt="Playas">
+          <div class="card-body">
+            <h3>Playas paradisíacas</h3>
+            <p>Relájate en arenas blancas y aguas cristalinas.</p>
+            <a class="link" href="#">Ver paquetes</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="paquetes" class="section alt-bg">
+      <div class="container">
+        <h2 class="section-title">Paquetes populares</h2>
+        <div class="grid grid-3">
+          <div class="package">
+            <h3>Escapada urbana - 4 días</h3>
+            <p class="price">$299</p>
+            <ul>
+              <li>Hotel 3 noches</li>
+              <li>Tour guiado</li>
+              <li>Desayuno incluido</li>
+            </ul>
+            <button class="btn">Reservar</button>
+          </div>
+
+          <div class="package">
+            <h3>Aventura en la selva - 7 días</h3>
+            <p class="price">$999</p>
+            <ul>
+              <li>Guía local</li>
+              <li>All inclusive</li>
+              <li>Transporte incluido</li>
+            </ul>
+            <button class="btn">Reservar</button>
+          </div>
+
+          <div class="package">
+            <h3>Relax en la playa - 6 días</h3>
+            <p class="price">$749</p>
+            <ul>
+              <li>Resort 4★</li>
+              <li>Spa & masajes</li>
+              <li>Vuelos opcionales</li>
+            </ul>
+            <button class="btn">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre-nosotros" class="section container">
+      <div class="about-grid">
+        <div>
+          <h2>Nuestra misión</h2>
+          <p>Crear experiencias de viaje responsables, conectando viajeros con comunidades locales y destinos sostenibles.</p>
+          <ul>
+            <li>Soporte 24/7</li>
+            <li>Reservas flexibles</li>
+            <li>Paquetes personalizados</li>
+          </ul>
+        </div>
+        <div class="testimonial">
+          <blockquote>
+            "Gracias a Explora Mundo encontré el viaje perfecto. Atención impecable y guías locales excepcionales."
+            <cite>— Ana P., viajera</cite>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact-section alt-bg">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contáctanos</h2>
+          <p>¿Tienes dudas? Escríbenos y te ayudamos a planear tu próxima aventura.</p>
+          <p><strong>Email:</strong> hola@exploramundo.com</p>
+          <p><strong>Teléfono:</strong> +591 700 00000</p>
+        </div>
+        <form class="contact-form" action="#" onsubmit="return false;">
+          <input type="text" placeholder="Tu nombre" required>
+          <input type="email" placeholder="Tu correo" required>
+          <textarea placeholder="Mensaje" rows="5" required></textarea>
+          <button class="btn">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <a class="logo small" href="#">Explora <span>Mundo</span></a>
+        <p class="muted">Diseñado con ♥ para viajeros curiosos.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Enlaces</h4>
+        <nav>
+          <a href="#">Términos</a>
+          <a href="#">Política de privacidad</a>
+        </nav>
+      </div>
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <nav>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">Twitter</a>
+        </nav>
+      </div>
+    </div>
+    <div class="copyright">© 2025 Explora Mundo. Todos los derechos reservados.</div>
+  </footer>
+
+  <script>
+    // Pequeño script para el menú responsivo
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle?.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+
+
