@@ -1,16 +1,14 @@
-// ==============================
-// 1) Clima
-// ==============================
+// Ej1
 function climaDesdeCelsius(tempC) {
-  if (tempC >= -10 && tempC <= 15) return 'Frio';
-  if (tempC >= 16 && tempC <= 25) return 'Templado';
-  if (tempC >= 26 && tempC <= 40) return 'Calor';
+  if (tempC >= -10 && tempC <= 15) return "frio";
+  if (tempC >= 16 && tempC <= 25) return "templado";
+  if (tempC >= 26 && tempC <= 40) return "calor";
   return 'Fuera de rango';
 }
 
 function mostrarClima() {
-  const temp = prompt("Introduce una temperatura en °C:");
-  const result = climaDesdeCelsius(Number(temp));
+  let temp = prompt("Introduce una temperatura");
+  let result = climaDesdeCelsius(Number(temp));
 
   document.getElementById("resultado").innerHTML = `
     <b>Resultado del clima</b><br>
@@ -19,9 +17,7 @@ function mostrarClima() {
   `;
 }
 
-// ==============================
-// 2) FizzBuzz
-// ==============================
+// Ej2
 function fizzBuzz() {
   let salida = [];
   for (let i = 1; i <= 100; i++) {
@@ -42,9 +38,7 @@ function mostrarFizzBuzz() {
   `;
 }
 
-// ==============================
-// 3) Fecha actual
-// ==============================
+// Ej3
 function fechaActualEnEspañol() {
   const meses = [
     'Enero','Febrero','Marzo','Abril','Mayo','Junio',
@@ -52,7 +46,7 @@ function fechaActualEnEspañol() {
   ];
 
   const dias = [
-    'Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'
+    'domingo','lunes','martes','miercoles','jueves','viernes','sabado'
   ];
 
   const hoy = new Date();
@@ -67,12 +61,10 @@ function mostrarFecha() {
   `;
 }
 
-// ==============================
-// 4) Lugar turístico
-// ==============================
+// Ej4
 const lugarTuristico = {
-  nombre: 'Castillo Histórico',
-  ciudad: 'La Paz',
+  nombre: "casa de la Moneda",
+  ciudad: "Potosi",
   precioEntrada: 50,
   horario: '09:00 - 18:00',
   calificaciones: [4, 5, 3, 4, 5],
@@ -100,9 +92,7 @@ function mostrarLugar() {
   `;
 }
 
-// ==============================
-// 5) Hotel
-// ==============================
+// Ej5
 class Hotel {
   constructor(nombre, ciudad, habitacionesDisponibles) {
     this.nombre = nombre;
@@ -113,9 +103,9 @@ class Hotel {
   reservar(cant) {
     if (cant <= this.habitacionesDisponibles) {
       this.habitacionesDisponibles -= cant;
-      return `Se reservaron ${cant} habitaciones.`;
+      return `Se reservaron ${cant} habitaciones`;
     } else {
-      return `No hay suficientes habitaciones.`;
+      return `No hay suficientes habitaciones`;
     }
   }
 
@@ -129,7 +119,7 @@ class Hotel {
   }
 }
 
-const hotel = new Hotel("Hotel Sol", "Cochabamba", 10);
+const hotel = new Hotel("Hotel Regina", "Cochabamba", 10);
 
 function mostrarHotel() {
   const r = prompt("¿Cuántas habitaciones deseas reservar?");
